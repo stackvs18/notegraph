@@ -14,5 +14,4 @@ staticfiles/
 
 # local-only: deploy notes with credentials, demo reset
 DEPLOY.md
-.github/workflows/reset-demo.yml
 reset-demo.ps1
