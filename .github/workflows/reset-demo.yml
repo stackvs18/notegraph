@@ -1,0 +1,15 @@
+name: Reset demo data
+on:
+  schedule: [{ cron: "30 18 * * *" }]   # 00:00 IST
+  workflow_dispatch:
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: server } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci
+      - run: npm run seed
+        env: { MONGO_URI: "${{ secrets.MONGO_URI }}" }

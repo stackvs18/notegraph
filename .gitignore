@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.local
+dist/
+build/
+__pycache__/
+*.pyc
+venv/
+db.sqlite3
+staticfiles/
+.DS_Store
+
+.env.atlas
+
+# local-only: deploy notes with credentials, demo reset
+DEPLOY.md
+reset-demo.ps1
